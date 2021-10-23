@@ -1,0 +1,17 @@
+Tag
+Full syntax
+#Fcode; indent 4
+\#TAG tag
+#indent; f
+
+This command was introduced in version 2.20 of StrongHelp. You use it to define a position within a page that a link can refer to. You can refer to a tag in the current page like this:
+#Fcode; indent 4
+\<display=\>#TAG [tag]\>
+#Indent; f
+
+If you don't specify a tag, it will use the displayed text as the tag.
+
+You can refer to tags in other pages like this:
+#Fcode; indent 4
+\<display=\>page#tag\>
+#indent; f

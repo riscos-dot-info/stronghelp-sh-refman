@@ -1,0 +1,48 @@
+F
+Full syntax :
+#fCode; Indent 4
+1: #f
+2: #f\{'*/_'}[no]
+3: #fno =	fontname xsize [ysize] [Bold no] [Italic no] [Both no]
+#tab
+4: #fname
+5: #fname =	[ f\{'*/_'}[no] ] [RGB no,no,no] [Align Left|Right|Centre]
+#tab  
+6: #fno/name:Some text
+#f;Indent
+
+This either sets which font/style to use or define a font/style.
+
+1:	This just restores previous font/rgb/align values. A maximum of 32 levels are remembered.
+2:	This sets a physical font. The characters '*/_' means use bold/italic variant of font or Underline font. If font number is not given then the current font is modified. F* means toggle bold-flag for the current font, and F*0 means use bold version of font 0. This should no longer be used. Use styles instead.
+3:	This defines a physical font. A font that has already been used on the page can not be redefined. The Nubers after "Bold" and "Italic" are other physical fonts, and are the ones used when the F\{'*/'} form is used. You would normally only use this in one of the !Configure files.
+4:	This sets which style should be used for the following text.
+5:	This defines a style. This can be done at any time, and will only influence the following text, but normally you would only do this in the !Configure files.
+6:	This is a short form of \{fno/name}Some text\{f}. It is particurlarly suitable for headings: #fH1:This is a Heading.. It is also handy for introducing single characters from /strange/ fonts..
+#tab
+
+Physical font numbers go from 0 to 31. By convention font 0 is used for body text, and font 1 is bold variant of that. Numbers 0 to 23 are reserved to StrongHelp's current and future use, and numbers 24 to 31 are for individual manuals or pages.
+
+
+The available styles are :
+
+#Indent 2
+Std		Default style for body of text
+Link		Style used for the text inside links
+Strong		Style invoked by putting \{*} or just * around some text
+Emphasis	Same for '/'
+Underline	Same for '_'
+Code		Style used for program examples. Monospaced.
+Cite		Style to use for citations
+H1 to H6	Headlines. H1 largest.
+#Indent;Tab
+
+In addittion to these, you can also define your own styles (max 16) Just pick a name and define and use it just as the predefined ones.
+
+Example:
+#fCode
+Define a physical font:
+\#f0 = Sassoon.Primary 12 Bold 1 Italic 2
+We want links to be underlined and in red:
+\#fLink= f_0 RGB 255.=,0,0
+#f

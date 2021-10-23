@@ -1,0 +1,105 @@
+Page name vs file name
+
+If all your pages are stored in the root directory of a manual, then the name you use to link to the page is the same as the actual file name. Once you start to get a few pages this will quickly become impractical, and you need to group them in sub directories.
+
+#fh1:Grouping pages on common prefix
+
+StrongHelp was originally designed to give help on SWI names, and since groups of these have the same prefix, it made sense to base the directories on this; Say you wanted to make two pages called {fcode:Wimp_Poll} and {fcode:Wimp_PollIdle}. You could do that in a number of ways:
+
+è	Both in the root directory
+#fcode
+	  Wimp_Poll
+	  Wimp_PollIdle
+#f
+
+è	Both in a common sub directory
+#fcode
+	  Wimp_
+	    Poll
+	    PollIdle
+#f
+
+è	And even further
+#fcode
+	  Wimp_
+	    Poll
+	      !root
+	      Idle
+#f
+
+(In the last example, when StrongHelp sees that {fcode:Wimp_Poll} lead to a directory and not a file, it will see if there is a {fcode:!root} file inside, and use that instead.)
+
+If you in the {fcode:Wimp_Poll} page wanted to link to the {fcode:Wimp_PollIdle} page, you would always use the full name, even if it is in the same directory as the current one. For SWI's that means you'd make a link like this:
+  {fcode}...blah \<Wimp_PollIdle\> blah..{f}
+
+If page names were relative to the current directory, you'd have to write something more cumbersome, like this:
+  {fcode}...blah \<Wimp_PollIdle=>Idle\> blah..{f}
+
+#fh1:Grouping pages on first letter
+
+Grouping on prefix is very suitable for pages that naturally /have/ the same prefix, but not so ideal where this isn't the case.
+
+For other kinds of data, it would be more natural to group them in directories based on function. Writing a manual on C libraries, it would be helpful to have directories named after the individual library, with files named after the individual functions inside, like this:
+
+#fcode
+	  stdio
+	    printf
+	    ..
+	  stdlib
+	    atoi
+	    ..
+#f
+
+You *can* do it like this, but you would always have to refer to the pages with full path ({fcode:stdio.printf}) and you could not then use 'F1' lookup.
+
+Instead, you can group the pages on their first letter. Of cource, you could do it like this:
+#fcode
+	  p
+	    rintf
+	    uts
+#f
+
+but that would make it highly uncomfortable to work with. Instead you can do it in a way that doesn't /swallow/ the letter:
+#fcode
+	  [p]
+	    printf
+	    puts
+#f
+
+You could even do something silly like this:
+#fcode
+	  [p]
+	    [p]
+	      [p]
+	        printf
+	        puts
+#f
+
+and StrongHelp would *still* find the page.
+
+The full syntax of that one is:
+
+	{fcode:[a-f] } look for files starting with a,b,c,d,e,f inside
+	{fcode:[-f]  } look for files starting with a,b,c,d,e,f inside
+	{fcode:[f-]  } look for files starting with f,g,h... inside
+
+#fh1:Redirection
+
+Sometimes you have two keywords that you'd like to point to the same page, either because the one is a variant of the other (eg COLOR / COLOUR), or perhaps they need to be explained together (eg IF / ENDIF). You can do this by creating an empty file like this:
+
+#fcode
+	COLOR>COLOUR
+	ENDIF>IF
+#f
+
+Looking for {fcode:ENDIF}, StrongHelp would instead load the file {fcode:IF}
+
+#fh1:Special characters
+
+There are restrictions to which characters you can have in your filenames. Some are general filing system restrictions, and some are due to the special interpretation StrongHelp gives them. If a page is only to be referred from links in other pages, this is no hardship, but if you want to use the 'F1' lookup from an editor, then you need a way around this.
+
+These are the characters that are 'reserved'
+
+	{fcode:![]\\\<\>.$%&?\#\:} + all ctrl characters
+
+An editor that is asked to perform a lookup on a word, is supposed to replace occurrences of these characters with {fcode:!x} + two digit hex code. As an example; The StrongHelp manual contains a text file called {fcode:!x0A}. This one is displayed when you press F1 in StrongED, and the caret is at the end of the line (pointing at the newline character)

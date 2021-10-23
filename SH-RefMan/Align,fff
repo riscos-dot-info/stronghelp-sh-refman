@@ -1,0 +1,22 @@
+Align
+Full syntax :
+#fCode; Indent 4
+\#Align Left | Right | Centre
+#f;Indent
+
+Tells StrongHelp where to put the following lines.
+
+Example:
+#fCode; wrap off
+\#Align Centre
+#Align Centre
+
+My mistress' eyes are nothing like the sun
+My hunger for her explains everything I've done
+To howl at the moon the whole night through
+And they really don't care if I do
+I'd go out of my mind, but for you.
+
+#Align
+\#Align
+#wrap; f

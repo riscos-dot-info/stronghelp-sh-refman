@@ -1,0 +1,16 @@
+How the image filing system is used
+
+Let's say that you press F1 in StrongED while standing on the word "abcd":
+
+With this kind of search, we only try to match this filename against files of type "text". Pages that are only available through links in other pages, should be of type "data"
+
+If there is a dir in the root called "ab", then StrongHelp will then search for "cd" inside this directory.
+
+If there is a dir called "[a-f]", then StrongHelp will look for "abcd" inside this. You can also use "[letter]", "[letter-]" or "[-letter]"
+
+If there is a file called "abcd>othername" then the page "othername" is loaded instead. This only applies for F1 searches. A link in a page must reference the actual file.
+
+If there is a dir called "abcd" then the file "abcd.!Root" is used.
+
+
+The actual name of a page should never contain the characters '![]\\\<>.$%&?#' Some more chars will probably be added to this list later. When F1 is pressed in an editor, it should convert such chars to !xXX ( "!x" + hex of ascii value )

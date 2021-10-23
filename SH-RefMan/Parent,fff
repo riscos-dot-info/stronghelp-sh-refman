@@ -1,0 +1,17 @@
+Parent
+Full syntax :
+#fCode; Indent 4
+\#parent name
+#f;Indent
+
+This tells StrongHelp which page to open at adjust-close of the current page, when it has no other history.
+
+When you click on a link and open a page, the new page gets the history of the old page + the name of the old page itself, but the *first* page has *no* history, and that is where "Parent" enters.
+
+The main reason for using "Parent" is to tie pages opened by pressing "F1" in an editor to a hierarchy.
+
+Example:
+#fCode
+Wimp_Poll (&400C7)
+\#Parent Wimp_
+#f

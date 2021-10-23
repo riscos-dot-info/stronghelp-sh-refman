@@ -1,0 +1,13 @@
+Line
+Full syntax :
+#fCode; Indent 4
+Line
+#f;Indent
+
+This places a horizontal line from the current indent to the far right. It will be black if page is light in colour, white if page is dark, and 3D if page is light grey.
+
+Example:
+#fCode
+Not a very exciting example:
+\#Line
+#f

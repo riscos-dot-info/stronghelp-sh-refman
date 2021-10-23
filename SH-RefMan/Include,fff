@@ -1,0 +1,16 @@
+Include
+Full syntax :
+#fCode; Indent 4
+\#Include fname
+#f;Indent
+
+This is a command parsed by the preprocessor. It *must* appear at the start of a line, and *not* inside "\{}"'s. If the file exists, the line is replaced with the contents of the file, and if not the line is just removed. Scanning then resumes from the start ow what was just loaded.
+
+Don't let a file include itself. You will only crash..
+
+Example:
+#fCode
+blah blah some more blah
+blah blah blah.
+\#Include StdDisclaimer
+#f

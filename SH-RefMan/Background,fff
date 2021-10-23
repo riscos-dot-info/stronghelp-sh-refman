@@ -1,0 +1,16 @@
+Background
+Full syntax :
+#fCode; Indent 4; wrap off
+Background \{ Wimp no | RGB no,no,no | Tile spritename }
+#f;Indent; wrap nojoin
+
+This tells StrongHelp how to paint the background, and what 'hint' to use as font background colour. If "Wimp" is used, then StrongHelp will let the Wimp clear the background with this colour, and thus use the Wimp "marbling" where that is activated (Normally only for colour 1). If "RGB" is given then StrongHelp will pass this through ColourTrans, which will if neccessary dither to simulate the correct colour. Finally, "Tile" will /tile/ the background with the given sprite.
+
+You would normally only use this command in the !StrongHlp.!Configure or \<Manual>.!Configure files, or in a title page.
+
+Example:
+#fCode
+#Background RGB 210,210,210
+This is the background used for this page
+\#Background RGB 210,210,210
+#f

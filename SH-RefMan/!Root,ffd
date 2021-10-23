@@ -1,0 +1,23 @@
+StrongHelp
+#fH1:StrongHelp
+#fH1:Reference Manual
+#align centre
+v 1.00
+#Line
+<Page structure=>psyntax>
+<Page commands=>pcommands>
+
+<Image file format=>iformat>
+<Page name vs file name=>isyntax>
+<Special files=>ifiles>
+
+<Programming interface=>interface>
+<Using StrongHelp from your application=>apphelp>
+<Bundling StrongHelp with your application=>bundle>
+
+<History>
+<Misc>
+<FAQ>
+#bottom
+#Line
+<StrongHelp=>StrongHelp:!Root> is a Freeware product by <Guttorm Vik=>Address>

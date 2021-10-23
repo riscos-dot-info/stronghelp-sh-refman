@@ -1,0 +1,19 @@
+Sprite
+Full syntax :
+#fCode; Indent 4
+\#Sprite x,y[,w,h] name [label] [=>link]
+#f;Indent
+
+x is no or "centre"
+y is no or "float"
+0,0 is in top left corner
+
+This places a sprite at the requested position. The sprite is either from a previously defined <Spritefile>, or it is a Wimp sprite.
+
+Normally the icon will get the size of the sprite, but if you want several icons to be next to each other and aligned sensibly, you can give a specific width and height.
+
+Example:
+#fCode
+Here comes the "Acorn" sprite from the Wimp pool:
+\#sprite c,f switcher
+#f

@@ -1,0 +1,66 @@
+Image file format
+You should normally not need to know the image file format, and you should not depend on it being constant.
+
+	All offsets are from the start of the file.
+	All blocks should start at a word-aligned offset, though versions of StrongHelp before 2.53 didn't do that correctly.
+	The block size includes the two leading words, but is not neccessarily aligned. The offset from one block to the next should be {fcode:(blocksize+3) AND NOT 3} (if version >= 2.53)
+	Well, that's not strictly true.. Between the blocks there can be a sequence of zero bytes. (When a FREE block is reused, whatever is left over is made into a new FREE block, but only if it is > 32 bytes. Else it is just zeroed out.)
+
+#line
+
+{*}File header{*}
+
++0	"HELP"
++4	Size of root block (Versions pre 2.60 said 40, although correct size has always been 44..)
++8	Version of StrongHelp that created this manual.
++12	Offset to first free block. -1 if none.
+
+	{/}This simulates a directory entry *above* the root dir{/}
+
++16	Offset to root dir
++20	load address
++24	exec address
++28	size (excluding the two first words)
++32	flags
++36	Reserved
++40	"$"
+
+#line
+
+{*}Directory block{*}
+
++0	"DIR$"
++4	Size of block
++8	Used
+
+	{/}Then comes zero or more of these{/}
+
++0	Offset to object
++4	Load address
++8	Exec address
++12	Length of object (not counting guard and length word)
++16	Flags
+	  0	owner read
+	  1	owner write
+	  3	locked
+	  4	public read
+	  5	public write
+	  8	is directory
++20	Reserved
++24	Name. Zero terminated and padded with zeros to word limit.
+
+#line
+
+{*}Data (file) block{*}
+
++0	"DATA"
++4	Size of block
++8	data...
+
+#line
+
+{*}Free block{*}
+
++0	"FREE"
++4	Size of block
++8	Offset to next free block, or -1

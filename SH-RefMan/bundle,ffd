@@ -1,0 +1,10 @@
+Bundling StrongHelp with your application
+If you want to bundle StrongHelp with a commercial application, then go right ahead and do so. You don't have to ask my permission, and you don't have to pay me anything. StrongHelp is a freeware product.
+
+Even so, you should contact me; there might be a new version just around the corner, that you'd want to have in your distribution, or there might be something I can tweak to make it work better for you.
+
+I also have some recommendations on how to do the bundling;
+
+è	Don't hide !StrongHlp inside your application. Put it outside, and let the user deal with it.
+
+è	Don't put your application manual inside the !Manuals directory. Put it inside your Resources directory instead, and launch it from within your own application

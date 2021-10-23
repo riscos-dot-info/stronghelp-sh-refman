@@ -1,0 +1,17 @@
+Below
+Full syntax :
+#fCode; Indent 4
+Below
+#f;Indent
+
+This tells StrongHelp that the following text or graphics should appear below everything that is on the page so far.
+
+You would normally use this to get below sprites or drawfiles where the x or y coordinate is given as an absolute value. (If you use "c,f" as the coordinate then the text automatically continues below)
+
+Example:
+#fCode
+\#Sprite 0,f !StrongHlp; Indent 8
+Here is a line to the right of the sprite
+\#Indent; below
+Here is a line below the sprite.
+#f

@@ -1,0 +1,13 @@
+Manuals
+Full syntax :
+#fCode; Indent 4
+\#Manuals
+#f;Indent
+
+This is a macro that is expanded, in the preprocess phase, to a list of all currently installed manuals. There are probably no other uses for this than to create StrongHelp's root page
+
+Example:
+#fCode
+Another advanced example:
+\#Manuals
+#f

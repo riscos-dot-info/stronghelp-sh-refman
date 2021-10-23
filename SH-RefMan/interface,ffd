@@ -1,0 +1,20 @@
+Interface to other programs
+The interface is a couple of simple Wimp messages and one \*command.
+
+The message is &43B00, and from offset 20 the following text should appear:
+
+	{fcode:Help_Word   [path] page}		Performs a lookup
+or  	{fcode:Help_Search [path] page}  	Opens the freetext search window
+
+Path is one of the following:
+
+ è	Nothing. All loaded help manuals will be scanned, in the order they appear in the root page of StrongHelp.
+
+ è	A comma separated list of help manuals to scan. If the list ends with comma, then all the rest of the manuals will be scanned once the ones in the list are used up.
+
+ è	The complete path to the image file. Programs should use this to give help on themselves:
+	{fcode:  Help_Word \<StrongED$Dir\>.Resources.uk.StrongED !root}
+
+If StrongHelp can't find anything, it will respond with the same message block, but with {fcode:&43B00} replaced by {fcode:&43B01}. The task can use this to provide other kinds of help. If the task doesn't acknowledge the {fcode:&43B01} message, StrongHelp will pop up its standard 'not found' message.
+
+The Command is {fCode:*StrongHelp [path] page}. StrongHelp just remembers the line until it regains control from Wimp_Poll, and then treats it as if it had received a Help_Word message.

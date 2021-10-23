@@ -1,0 +1,16 @@
+Draw
+Full syntax :
+#fCode; Indent 4
+Draw x,y drawfilename
+#f;Indent
+
+x is no or "centre"
+y is no or "float"
+0,0 is in top left corner
+
+This places a Drawfile at the requested postion. To actually render it, StrongHelp relies on the DrawFile module released by Acorn. If this is not present, StrongHelp will just leave the space empty.
+
+Example:
+#fCode
+\#Draw 0,0 !i
+#f

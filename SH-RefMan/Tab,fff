@@ -1,0 +1,26 @@
+Tab
+Full syntax :
+#fCode; Indent 4
+\#Tab \{ "," [format] }
+#f;Indent
+
+This marks the end and beginning of an area of the text formatted with TAB characters. The format is for the following text. There is an implicit #Tab at the start and end of the source. If there is any "format" then this applies to the followin text.
+
+The syntax of "format" is the same as when defining a <Logical Font=>F> (Point five in the list). It can be as simple as "F*", and it can look like "fStrong RGB 255,0,0 Align Centre".. This can be given for each column. (If you just want the tird column to be bold, do {fcode:",,f*"} )
+
+The TAB character (or a sequence of them) is used to separate columns. The text after the last TAB can wrap, and then it will indent to this last TAB. Paragraphs without TAB's in them will not be influenced.
+
+Several TAB characters in sequence is taken as one. This so that you can make the source more readable. If you want to skip a column, you will have to leave a space betwen the TABs. You can use {fcode:"\\t"} instead of TAB.
+
+{*}Note :{*}	The last column can currently *not* have any other alignment than "Left". If it does, it won't display.
+
+I'm too tired to explain the TAB's properly, so just look at the example. (|----| represents a TAB character)
+
+Example:
+#fCode
+Bel Canto|------||------|Divine Voice
+Neural Network|-||------|Calms the Beast
+\#Tab
+Here some|------||------|text that will
+not align with|-||------|the lines above
+#f

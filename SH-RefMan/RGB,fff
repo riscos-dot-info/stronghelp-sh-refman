@@ -1,0 +1,12 @@
+RGB
+Full syntax :
+#fCode; Indent 4
+\#RGB no,no,no
+#f;Indent
+
+This sets the colour to be used for subsequent text. The numbers are fro 0 to 255 and specify the Red, Green and Blue part of the colour. Use "RGB" alone to restore previous colour (only one level.)
+
+Example:
+#fCode
+Her tantalising \{RGB 255,0,0}red\{RGB} lips came closer..
+#f

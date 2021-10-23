@@ -1,0 +1,22 @@
+Indent
+Full syntax :
+#fCode; Indent 4
+\Indent [[+]number]
+#f;Indent
+
+This is used to indent paragraphs of text. Currently this is given in OS characters (ie actual OS width is number * 16) Use "+" to add indent to current indent, and "Indent" by itself to go back one level to previous indent.
+
+Currently using Indent is the only way to put text to the right of graphics in the margin.
+
+Example:
+#fCode
+Level 0
+\#Ident 4
+Level 4
+\#Indent +4
+Level 8
+\#Indent
+Level 4 again
+\#Indent
+Back to 0
+#f

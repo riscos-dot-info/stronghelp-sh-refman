@@ -1,0 +1,6 @@
+Hex code 0A, decimal 10, binary 00001010
+This character is what we professionals call a 'Line feed' or just 'LF'. It is used (sometimes together with a 'Carriage Return' / CR) to separate the lines in a text file.
+
+The name 'Line feed' originates from the old days when they didn't have proper monitors, but sent all output to a line printer. The LF then scrolled the page one line up, and the CR moved the print head back to the left margin.
+
+Some very old-fasioned machines still use *both* these characters to separate lines (for compatibility reasons)

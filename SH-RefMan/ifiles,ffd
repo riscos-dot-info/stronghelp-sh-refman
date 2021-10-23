@@ -1,0 +1,23 @@
+Special files
+#fh4:In any manual
+
+#tab fcode
+!Configure	Contains font definitions for this manual
+
+!Root		The page that is displayed when a manual is clicked.
+
+NotFound_{/}manual{/}	These pages are used if you have a link to another manual, and that manual isn't installed. You can use these pages to describe what the external manual is, and where it can be found.
+
+{/}a{/}>{/}b{/}		This is a redirection. When you link to, or do a lookup on /a/, you get page /b/ instead.
+
+#fh4:In the StrongHelp manual
+
+!Menu		The page that is displayed when the user clicks on the StrongHelp iconbar icon.
+
+#fh4:In !StrongHelp directory
+
+!Configure	The master configuration file.
+
+DrawWrap	When you link directly to a draw file, this file is used as a glue page.
+
+MDirWrap	Subdirectories in !Manuals behave partly like manuals themselves, and when linked to StrongHelp looks for a !Root file. If that doesn't exist, this file is used instead.

@@ -1,0 +1,16 @@
+Misc
+è	Before StrongHelp search for a page, it checks if there is a file called !Pre in the root dir of the image. This is a machine code utility that can alter the string to be searched for. Examples on usage is to strip off the "X" in XOS_Plot and the "eq" in LDMeqFD":
+	  In:	R0	=	Orignal word (contents *not* to be altered)
+	  	R1	=	Buffer for modified string
+	  	R13	=	Small stack
+	  Out:	R0	=	modified string (can point to anywhere in buffers R0 or R1. For XOS_Plot, we only do R0=R0+1)
+
+è	When a file is dragged to the iconbar, StrongHelp sets the system variable tmp$path to the full path of the file, and tmp$leaf to the leafname of the file. Then it tries to look up the filetype in a manual called {fcode:filetypes}
+
+è	Use the CleanCopy program to minimise internal waste and fragmentation. (Just drag the Manual to StrongHelp's iconbar icon, and selct "CleanCopy")
+
+è	Use the Extract program to convert data for the old version of StrongHelp. This is an 'ad hoc' program, and you'll have to edit it before you run it for a specific conversion
+
+è	As of version 2.10 of StrongHelp, all files can be squashed. Note that there isn't much to be gained by squashing short text pages (or any other small files) Better go for sprite and drawfiles. Also note that squashed files are currently not searched by the freetext search routine (well, they *are* searched, but not unsqueezed first)
+
+è	You can link directly to a Draw file. StrongHelp will then use the file DrawWrap as a dummy page.

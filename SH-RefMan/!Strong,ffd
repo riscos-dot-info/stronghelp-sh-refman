@@ -1,0 +1,17 @@
+Strong, Italic and Underline
+Full syntax :
+#fCode; Indent 4
+Here is a \*strong\* word
+Here is a strong expression : \{\*} 2*3*4 \{\*}
+#f;Indent
+
+To simplify the use of the <styles=>f> "Strong", "Emphasis" and "Underline" we use the characters *, / and _ (underscore) directly in the text, or as commands inside "\{}"
+
+If used directly, there must be a space or newline in front of the first "*", only letters and spaces between, and space, newline or punctuation after the second "*", and both "*"'s must be next to a letter.
+
+To actually display a "*" prefix it with "\\"
+
+Example:
+#fCode
+I must tell you Darla, I have \*strong\* feelings about this, and that's no \/joke\/.
+#f

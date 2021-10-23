@@ -1,0 +1,20 @@
+Address
+#Wrap off
+#spritefile me3
+#sprite 0,0 me
+#Indent 16
+#Align Centre
+
+<guttorm.vik@eunet.no=>#url mailto:guttorm.vik@eunet.no>
+
+Look for new versions at:
+
+<http://home.eunet.no/~guttorvi/strong.html=>#url>
+
+#bottom; align; Indent
+There you'll also find
+
+#Align
+è StrongED, the text editor
+è StrongHelp manuals
+è StrongMen, the file and URL hotlist manager

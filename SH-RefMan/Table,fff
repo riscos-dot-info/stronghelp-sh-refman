@@ -1,0 +1,26 @@
+Table
+Full syntax :
+#fCode; Indent 4
+\#Table [Columns | Lines] no
+Some lines
+of text
+\#Endtable
+#f;Indent
+
+The lines between {fcode:#Table} and {fcode:#Endtable} are ordered in columns so that the given number of columns or lines is reached. If neither {fcode:Columns} or {fcode:Lines} are given, then {fcode:Columns} is assumed.
+
+{*}No {fcode:#} commands or comments can appear in the text, and one should be careful with "\{}" commands.{*}
+
+Example:
+#fCode
+\#Table Lines 2
+ These
+ Words
+ Will
+ Be
+ Ordered
+ In
+ 4
+ Columns
+\#Endtable
+#f

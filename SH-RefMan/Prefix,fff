@@ -1,0 +1,14 @@
+Prefix and Postfix
+Full syntax :
+#fCode; Indent 4
+\#Prefix string
+\#Postfix string
+#f;Indent
+
+These strings are added to the text inside a link of the type \<link>, to get the actual name of the new page. Links of the type \<text=>link> are not affected.
+
+Example:
+#fCode
+\#Prefix Wimp_
+..can also use \<PollIdle>
+#f

@@ -1,0 +1,45 @@
+Page syntax
+#fh1:Preprocess
+
+Before the actual parsing of the page is started, it is preprocessed. Two things are expanded :
+
+An occurence of {Fcode:\{$ varname\}} will be replaced by the value of the system variable varname
+
+If a line starts with {Fcode}#Include {/}file{/}{f} then the line will be replaced with the contents of the file. No error is given if the file doesn't exist or fails to load.
+
+Then, before the parsing of the page begins, the commands in !StrongHlp.!Configure and \<manual>.!Configure are parsed (Setting up default fonts and styles)
+
+#fh1:Title
+
+The first line of the file is used as the page title.
+
+#fh1:Main body
+
+The main body contains plain text and <commands=>pcommands>. Commands are introduced with a "#" at the start of a line, or between "\{"and "}" otherwise. To use reserved characters, prefix with "\\" (ex: Here is a pair of \\\{ curly brackets } ) Also in the text itself, TAB characters can be used to align columns of text, and "*", "/" and "_" can be used to turn on/off various styles.
+
+#fh1:Links
+
+Links to other pages are of the form {Fcode:<display\>} or {Fcode:<display=\>newpage\>} If the simple form is used, {Fcode:#prefix} and {Fcode:#postfix} are added (see below) If the full form is used, then if first char of "newpage" is "*", this is a os command that will be Wimp_StartTask'ed.
+
+New in version 2.10 of StrongHelp:
+#indent 2
+{Fcode:<display=\>#URL [url]\>}
+{Fcode:<display=\>#TYPE [text to type]\>}
+#indent
+
+The first one will broadcast an URL message, and if noone answers, it will try to start the correct URL server. This is the protocol used by the ANT Internet suite.
+
+The second one will insert the text into the keyboard buffer, and from there it will go to the program that currently has the input focus.
+
+For both; if no text is given, it will use the display text instead.
+
+New in version 2.20 of StrongHelp:
+#indent 2
+{Fcode:#TAG tag}
+{Fcode:<display=\>#TAG [tag]\>}
+{Fcode:<display=\>page#tag\>}
+#indent
+
+The first one defines a 'tag'. The second one moves to a local tag, and the third one to a tag on a given page.
+
+/Note/: If you want to display the character {Fcode:"<"}, you must /escape/ it with {Fcode:"\\"} (In an attempt to be nice to the manual writer, you don't have to escape {Fcode:<=}, {Fcode:<-} and {Fcode:<<})

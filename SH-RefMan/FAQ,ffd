@@ -1,0 +1,20 @@
+Frequently Asked Questions
+è	{/}Why doesn't StrongHelp use HTML to describe its pages?{/}
+
+	   	When I started writing StrongHelp I looked at HTML, but found it largely unreadable and decided to make my own syntax. If I had done today, I would've used HTML. Not because it has gotten any better, but because it is so well known.
+
+è	{/}When I save a help page from !Zap, the manual is corrupted! Why?{/}
+
+	   	Earlier versions of Zap created files in a way that StrongHelp isn't designed to support. Later versions of Zap work fine.
+
+è	{/}Why does the Manual file become so big when something inside is edited? (and then shrink again when StrongHelp quits){/}
+
+	   	StrongHelp uses something called an Image Filing System (a service provided by the OS) and such files allocate disc space in large chunks to be more efficient. I don't know why the OS decides they have to grow with as much as they do (Several 100 K's in some cases). It might be a bug in the OS.
+
+è	{/}When I quit StrongHelp and then doubleclick on a Manual, I get the error "Error when reading xxxx - xxxx is a file." Is this a bug?{/}
+
+	   	Yes, it *is* a bug, but not in StrongHelp. The filer caches directory info, and hasn't discovered that these files no longer are images/directories. It will be updated the next time it reads the directory.
+
+è	{/}After crashing StrongHelp my Manual still works, but it is *huge*. How can I fix this?{/}
+
+	   	First take a backup, then drag it to Stronghelp's iconbar icon and select "CleanCopy". In most cases this will fix it.

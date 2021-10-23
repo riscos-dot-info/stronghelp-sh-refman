@@ -1,0 +1,39 @@
+Using StrongHelp from your Application
+
+#fh1:Simple launch
+
+If you just want to open the root page of your manual, you can use the Filer_Run OS command. In your !app.!help file that would look like this:
+
+#fcode:  Filer_Run \<app$dir\>.Resources.uk.appmanual
+
+If you examine StrongHelp's own !help file, you'll see that it does more or less this, but with an added step to support multiple languages.
+
+From within your application you'd do basically the same:
+
+#wrap off
+#tab ,fcode
+C	system("Filer_Run \<app$dir\>.Resources.uk.appmanual");
+
+BASIC	OSCLI "Filer_Run \<app$dir\>.Resources.uk.appmanual"
+
+Assembly	ADR R0,help
+		SWI "OS_CLI"
+		...
+		.help EQUS "Filer_Run \<app$dir\>.Resources.uk.appmanual":=0
+#tab
+#wrap
+
+#fh1:Opening a specific page
+
+If it's not the root page you're after, you'll have to do slightly more work.You broadcast a Help_Word message. If the message bounces, you use {fcode:StrongHelp$Dir} to launch StrongHelp, and then send the message anew.
+
+
+#fh1:Where to launch it from
+
+The user should be able to get to the root page of the manual from the following locations:
+
+è	The {fcode:!app.!help} file (ie selecting 'help' from the filer menu)
+è	Clicking on 'Info' in the iconbar menu
+è	Clicking on a 'help' button in the 'about this program' window
+è	A 'Help' entry in the document 'Misc' menu.
+è	For keyboard driven programs; Pressing F1

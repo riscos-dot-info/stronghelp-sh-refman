@@ -1,0 +1,20 @@
+Wrap
+Full syntax :
+#fCode; Indent 4
+\#Wrap [ On | Off | Nojoin ]
+#f;Indent
+
+This tells StrongHelp how to preprocess the lines in a paragraph, and how to display them.
+
+On	All textlines not interrupted by a blank line or a "#" will be joined to one line, and wrapped to fit the window.
+Off	StrongHelp will do nothing with the text, and not wrap it either
+NoJoin	StrongHelp will not join lines, but will wrap them. (ie each paragraph is written as one long line)
+
+Use just "Wrap" to restore the previous setting (just one level)
+
+Example:
+#fCode
+#Wrap off
+\#Wrap off
+This is a line that I don't want StrongHelp to split
+#f

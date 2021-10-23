@@ -1,0 +1,15 @@
+Subpage
+Full syntax :
+#fCode; Indent 4
+\#Subpage name
+#f;Indent
+
+When you click on an link of the form \<text=>.xxx> (Note the dot), then StrongHelp expects to find the new page in the current file. It searches for a line beginning with "#Subpage xxx", and uses the text from the line after and to the next #Subpage or end of file, as source for the new page.
+
+Example:
+#fCode
+Mainpage
+This is a tiny page with a tiny \<subpage=>.sub>
+\#Subpage sub
+This is the tiny subpage.
+#f

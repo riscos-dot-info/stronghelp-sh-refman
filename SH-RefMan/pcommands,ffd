@@ -1,0 +1,27 @@
+Commands
+These are the available commands. Multiple commands are separated by ";"
+
+<# something=>!Comment>	A comment. Only at start of line.
+<\* / and _=>!Strong>	Toggle #fStrong, #fEmphasis and #fUnderline on/off
+<Align>		Where on a line to place the text
+<Background>	How the page background should appear
+<Below>		Continue next line below all graphics
+<Bottom>	Move everything below to the bottom of the page
+<Draw>		Place a drawfile on the page
+<Endtable=>Table>	End of a #Table
+<F>		Define/Set physical or logical font.
+<Include>	Include a source file
+<Indent>	Set indent to be used by the following text
+<Line>		Place a horizontal line on the page
+<Manuals>	Expands to a list of all installed manuals
+<Parent>	Defines parent for a page without history
+<Prefix>	Prefixed to \<link> to get complete link
+<Postfix=>Prefix>	Postfixed to \<link> to get complete link
+<RGB>		Set colour to be used on the following text
+<Sprite>	Place a sprite on the page
+<Spritefile>	Defines where to find a #Sprite
+<Subpage>	Announces end of current page, and beginning of a subpage
+<Tab>		Starts/Ends section formatted with the TAB character
+<Table>		Order the following lines in columns
+<Tag>		Defines a tag that a link can refer.
+<Wrap>		Tells StrongHelp how to preprocess the lines

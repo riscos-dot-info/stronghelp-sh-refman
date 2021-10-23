@@ -1,0 +1,13 @@
+Comment
+Full syntax :
+#fCode; Indent 4
+\# Some text. Note first space
+#f;Indent
+
+When this occurs at the beginning of a line, StrongHelp ignores the rest of the line. A line with only a single "#" on it is also ignored.
+
+Example:
+#fCode
+\# We comment out this command for the time being.
+\# Draw 0,0 !i
+#f
