@@ -9,4 +9,5 @@ This sets the colour to be used for subsequent text. The numbers are fro 0 to 25
 Example:
 #fCode
 Her tantalising \{RGB 255,0,0}red\{RGB} lips came closer..
+Her tantalising {RGB 255,0,0}red{RGB} lips came closer..
 #f

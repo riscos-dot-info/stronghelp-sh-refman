@@ -15,6 +15,7 @@ These are the available commands. Multiple commands are separated by ";"
 <Line>		Place a horizontal line on the page
 <Manuals>	Expands to a list of all installed manuals
 <Parent>	Defines parent for a page without history
+<Pointer>	Enables / disables pointer context switching
 <Prefix>	Prefixed to \<link> to get complete link
 <Postfix=>Prefix>	Postfixed to \<link> to get complete link
 <RGB>		Set colour to be used on the following text

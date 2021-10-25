@@ -6,8 +6,10 @@ Line
 
 This places a horizontal line from the current indent to the far right. It will be black if page is light in colour, white if page is dark, and 3D if page is light grey.
 
+From StrongHelp 2.74, this command may take a numeric parameter which is the width of the line expressed as a percentage of the overall page width. When used in this manner, the command respects the current text alignment setting.
+
 Example:
 #fCode
-Not a very exciting example:
-\#Line
+Short line across the middle:
+\#Align Centre; Line 50; Align
 #f

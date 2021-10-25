@@ -1,0 +1,15 @@
+Pointer
+Full syntax :
+#fCode; Indent 4
+\#Pointer [0|1]
+#f;Indent
+
+This command controls whether the pointer is switched to a hand when over a link. It works on a per-page basis, but this is for internal use only. {*}Do not use this command.{*}
+
+This command is used by default to diable pointer context switching on the StrongHelp main menu pages. In all other cases this is a user choice.
+
+Example:
+#fCode
+Another advanced example:
+\#Pointer 1
+#f

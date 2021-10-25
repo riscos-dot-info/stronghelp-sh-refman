@@ -2,8 +2,8 @@ StrongHelp
 #fH1:StrongHelp
 #fH1:Reference Manual
 #align centre
-v 1.00
-#Line
+v 1.10  (21-Jun-01)
+#Line 50
 <Page structure=>psyntax>
 <Page commands=>pcommands>
 
@@ -15,7 +15,7 @@ v 1.00
 <Using StrongHelp from your application=>apphelp>
 <Bundling StrongHelp with your application=>bundle>
 
-<History>
+<History=>StrongHelp:History>
 <Misc>
 <FAQ>
 #bottom

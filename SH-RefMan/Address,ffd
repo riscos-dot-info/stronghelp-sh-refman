@@ -3,18 +3,22 @@ Address
 #spritefile me3
 #sprite 0,0 me
 #Indent 16
+
+Guttorm Vik, (pictured left) was the original author of
+StrongHelp, up to version 2.70. Christian Ludlam is 
+currently maintaining it, he can be contacted via
 #Align Centre
 
-<guttorm.vik@eunet.no=>#url mailto:guttorm.vik@eunet.no>
+<chris@recoil.org=>#url mailto:chris@recoil.org>
 
 Look for new versions at:
 
-<http://home.eunet.no/~guttorvi/strong.html=>#url>
+<http://sudden.recoil.org/stronghelp/=>#url>
 
 #bottom; align; Indent
 There you'll also find
 
 #Align
-è StrongED, the text editor
 è StrongHelp manuals
-è StrongMen, the file and URL hotlist manager
+è StrongHelp accessories
+è StrongHelp source

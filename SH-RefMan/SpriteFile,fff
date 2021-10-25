@@ -6,6 +6,8 @@ Full syntax :
 
 This defines a Spritefile where the <Sprite> command will look for a sprite. It will first be loaded when a Sprite command is encountered, so it can be defined put in a modules !Configure file. When loaded the *entire* file is loaded, not just the one used sprite..
 
+From StrongHelp 2.74, sprites may have mode sufficies as with *iconsprites. For example, a page may have a Sprites22 file and a Sprites file. In a hi res mode, the 22 file is used first - if this doesn't exist, the Sprites file is used. The file is reloaded on a mode change.
+
 Example:
 #fCode
 \#Spritefile !Sprites
